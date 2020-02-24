@@ -1,38 +1,121 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+}
+
+#headerText {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.balance {
+  line-height: 0.6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.balanceContainer {
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balanceGrid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: azure;
+  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
-.App-link {
-  color: #61dafb;
+#income {
+  color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#expense {
+  color :red;
+}
+
+#incomeGrid {
+  flex: 1;
+}
+
+#expenseGrid {
+  flex: 1;
+}
+
+#verticalLine {
+  background: linear-gradient(gray,gray) no-repeat center/2px 70%;
+  flex: 0.1;
+}
+
+.historyContainer {
+  list-style-type: none;
+  padding: 0 0 20px 20px;
+  margin-bottom: 40px;
+}
+
+.transactionElement {
+  background-color: azure;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  border: 0.5px solid rgba(0, 0, 0, 0.8);
+  border-right: 5px solid #c0392b;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+h4 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: green;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
 }
